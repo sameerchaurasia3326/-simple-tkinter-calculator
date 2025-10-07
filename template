@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; }
+        .calculator { border: 2px solid #333; border-radius: 10px; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        #display { width: 95%; height: 50px; font-size: 24px; text-align: right; margin-bottom: 10px; padding: 5px; }
+        .buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .btn { padding: 20px; font-size: 18px; border-radius: 5px; border: 1px solid #ccc; cursor: pointer; }
+        .btn:hover { background-color: #ddd; }
+        .btn-equals { grid-column: span 2; background-color: #4CAF50; color: white; }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <form method="post">
+            <input type="text" id="display" name="expression" value="{{ result }}">
+            <div class="buttons">
+                <button type="button" class="btn" onclick="addToDisplay('7')">7</button>
+                <button type="button" class="btn" onclick="addToDisplay('8')">8</button>
+                <button type="button" class="btn" onclick="addToDisplay('9')">9</button>
+                <button type="button" class="btn" onclick="addToDisplay('/')">/</button>
+                <button type="button" class="btn" onclick="addToDisplay('4')">4</button>
+                <button type="button" class="btn" onclick="addToDisplay('5')">5</button>
+                <button type="button" class="btn" onclick="addToDisplay('6')">6</button>
+                <button type="button" class="btn" onclick="addToDisplay('*')">*</button>
+                <button type="button" class="btn" onclick="addToDisplay('1')">1</button>
+                <button type="button" class="btn" onclick="addToDisplay('2')">2</button>
+                <button type="button" class="btn" onclick="addToDisplay('3')">3</button>
+                <button type="button" class="btn" onclick="addToDisplay('-')">-</button>
+                <button type="button" class="btn" onclick="addToDisplay('0')">0</button>
+                <button type="button" class="btn" onclick="addToDisplay('.')">.</button>
+                <button type="button" class="btn" onclick="addToDisplay('+')">+</button>
+                <button type="button" class="btn" onclick="clearDisplay()">C</button>
+                <button type="submit" class="btn btn-equals">=</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+        function addToDisplay(value) {
+            display.value += value;
+        }
+        function clearDisplay() {
+            display.value = '';
+        }
+    </script>
+</body>
+</html>
