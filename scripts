@@ -1,0 +1,13 @@
+scripts/install_dependencies.sh
+
+#!/bin/bash
+# Install any dependencies your app needs
+# For a simple calculator app, you might not need much here
+echo "Installing dependencies..."
+
+scripts/start_server.sh
+
+#!/bin/bash
+# Start your application
+# Adjust this based on how your calculator app should run
+echo "Starting application..."
