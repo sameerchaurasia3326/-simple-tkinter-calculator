@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Define a route for the homepage
 @app.route('/')
 def hello():
-    return "Hello, World! Your Python app is run run."
+    return "Hello, World! Your Python app is run."
 
 # This allows the app to be run by a production server
 if __name__ == '__main__':
