@@ -8,4 +8,4 @@ sudo apt-get install python3-pip -y
 cd /home/ubuntu/myapp
 
 # Install Python dependencies from requirements.txt
-sudo pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt --break-system-packages
