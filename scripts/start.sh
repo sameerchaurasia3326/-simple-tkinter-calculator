@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Navigate to the app directory
 cd /home/ubuntu/myapp
-echo "Starting app..."
-nohup python3 app.py > app.log 2>&1 &
+
+# Start the application using Gunicorn
+echo "Starting application with Gunicorn..."
+gunicorn --bind 0.0.0.0:80 app:app --daemon
