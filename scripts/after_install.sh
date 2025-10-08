@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "Setting permissions..."
-sudo chmod -R 755 /home/ubuntu/myapp
+cd /home/ubuntu/myapp
+sudo pip3 install -r requirements.txt
