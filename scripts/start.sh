@@ -5,4 +5,4 @@ cd /home/ubuntu/myapp
 
 # Start the application using Gunicorn
 echo "Starting application with Gunicorn..."
-gunicorn --bind 0.0.0.0:80 app:app --daemon
+sudo gunicorn --bind 0.0.0.0:80 app:app --daemon
